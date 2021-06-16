@@ -6,6 +6,7 @@ let senhaPrioritario = [];
 let divSenha = document.querySelector('.senha');
 let divCaixa = document.querySelector('.caixa');
 let senhaChamada = 'Nenhuma senha';
+let senhaGerada = document.querySelector('.senha-gerada');
 
 /* === BOTÕES === */
 
@@ -42,7 +43,7 @@ function montaSenha(prefix, numero, tipo) {
             alert('Erro ao criar a senha. Tente novamente!');
             break;
     }
-    
+    senhaGerada.textContent = senhaMontada;
     imprimeSenhas();
     return senhaMontada;
 }
@@ -56,6 +57,7 @@ function imprimeSenhas() {
 /* === CAIXAS ===*/
 
 function preencheERemove(array) {
+    senhaGerada.textContent = '-';
     senhaChamada = array[0];
     array.shift();
     return senhaChamada;
