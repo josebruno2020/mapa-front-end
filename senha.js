@@ -57,7 +57,7 @@ function imprimeSenhas() {
 /* === CAIXAS ===*/
 
 function preencheERemove(array) {
-    senhaGerada.textContent = '-';
+    senhaGerada.textContent = '';
     senhaChamada = array[0];
     array.shift();
     return senhaChamada;
